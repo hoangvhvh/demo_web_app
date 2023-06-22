@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+                integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+                crossorigin="anonymous" referrerpolicy="no-referrer" />
+<title>Xây dựng Form</title>
+</head>
+<body>
+     <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        
+        form {
+            width: 500px;
+            margin: 0 auto;
+            border: 5px solid red;
+            box-sizing: border-box;
+            padding: 10px;
+        }
+        
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        
+        input[type="text"], select {
+            width: 100%;
+            padding: 5px;
+            border: 3px solid #008B8B;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        
+        input[type="checkbox"], input[type="radio"] {
+            margin-right: 5px;
+        }
+        
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        h2{
+           color: #fff;
+           background-color: orangered;
+           text-align: center;
+           border: 5px solid #696969;
+           box-sizing: border-box;
+           padding: 10px;
+        }
+        hr{
+           border: 2px solid #C71585;
+        }
+    </style>
+    
+    <form action="FormProcessing" method="POST">
+        <h2>Form Đăng Nhập</h2>
+        <hr>
+        <label for="text-field">Text Field - Nhập dữ liệu:</label>
+        <input type="text" id="text-field" name="text-field"><br>
+        
+        <input type="hidden" id="hidden-field" name="hidden-field" value="Hidden Value"><br>
+        
+        <label for="check-box">Check Box - Đồng ý điều khoản:</label>
+        <input type="checkbox" id="check-box" name="check-box"><br>
+        
+        <label for="list-box">List Box - Môn học:</label>
+        <select id="list-box" name="list-box" class="text-dark">
+            <option value="Java EE Web">Java EE Web</option>
+            <option value="PHP MVC">PHP MVC</option>
+            <option value="Javascript vs Jquery">Javascript với Jquery</option>
+            <option value="Lap trinh C#">C#</option>
+            <option value="ASP.Net">ASP.Net</option>
+            <option value="Python">Python</option>
+        </select><br>
+        
+        <label for="radio-button1">Radio Button - Giới tính (1):</label>
+        <input type="radio" id="radio-button1" name="radio-button" value="Nam"><br>
+        
+        <label for="radio-button2">Radio Button - Giới tính (0):</label>
+        <input type="radio" id="radio-button2" name="radio-button" value="Nữ"><br>
+        
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
